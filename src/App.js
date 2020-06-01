@@ -1,15 +1,15 @@
-import React from "react";
+import { React, useState } from "react";
 import Question from "./Question";
 import "./App.css";
 
 function App() {
   
   // state
-  const [state, setState] ""
+  const [state, setState] = useState [""]
   
   // fetch
 
-  fetch one random item from the array/variable
+  // fetch one random item from the array/variable
 
   // setState
 
