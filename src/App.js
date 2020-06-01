@@ -3,25 +3,24 @@ import Question from "./Question";
 import "./App.css";
 
 function App() {
-  
-  // state
-  // const [question, setQuestion] = useState [""]
-  
-  // fetch
+	// state
+	// const [question, setQuestion] = useState [""]
 
-  // fetch one random item from the questions array/variable
+	// fetch
 
-  // setState
-  // setQuestion = () => {
+	// fetch one random item from the questions array/variable
 
-// }
+	// setState
+	// setQuestion = () => {
 
-  // onclick
-  // const generate = () => {
+	// }
 
-  // }
-  
-  return (
+	// onclick
+	// const generate = () => {
+
+	// }
+
+	return (
 		<div className="App">
 			<button>Generate</button>
 			<Question />
