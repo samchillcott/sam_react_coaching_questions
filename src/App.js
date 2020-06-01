@@ -5,23 +5,25 @@ import "./App.css";
 function App() {
   
   // state
-  const [state, setState] = useState [""]
+  // const [question, setQuestion] = useState [""]
   
   // fetch
 
-  // fetch one random item from the array/variable
+  // fetch one random item from the questions array/variable
 
   // setState
+  // setQuestion = () => {
 
+// }
 
   // onclick
-  const generate = () => {
+  // const generate = () => {
 
-  }
+  // }
   
   return (
 		<div className="App">
-			<button onClick={generate}>Generate</button>
+			<button>Generate</button>
 			<Question />
 		</div>
 	);
