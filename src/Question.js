@@ -3,7 +3,7 @@ import React from 'react'
 function Question() {
     return (
         <div>
-            Q component
+            Question component
         </div>
     )
 }
