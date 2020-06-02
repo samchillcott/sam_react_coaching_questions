@@ -9,7 +9,7 @@ import questions from "./questions.js";
 
 const App = () => {
 	// state
-	const [question, setQuestion] = useState([]);
+	const [question, setQuestion] = useState("");
 
 	// fetch do i need a try and catch? kiss for now
 	// const getQuestion = async () => {
@@ -27,22 +27,10 @@ const App = () => {
 	// };
 	// fetch one random item from the questions array/variable
 
-	// setState
-	// setQuestion = () => {
-
-	// }
-
-	// onclick
-	// const generate = () => {
-
-	// }
-
 	let randomQuestion = () => {
 		console.log("randomQ triggered");
 		let q = questions[Math.floor(Math.random() * questions.length)];
-		console.log(q);
 		setQuestion(q);
-		console.log(question);
 	};
 
 	return (
