@@ -25,10 +25,8 @@ const App = () => {
 	// 		console.log(error);
 	// 	}
 	// };
-	// fetch one random item from the questions array/variable
 
 	let randomQuestion = () => {
-		console.log("randomQ triggered");
 		let q = questions[Math.floor(Math.random() * questions.length)];
 		setQuestion(q);
 	};
