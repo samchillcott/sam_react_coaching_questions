@@ -1,7 +1,10 @@
 import React from "react";
 
-function Question() {
-	return <div>"Question component"</div>;
+const Question = ({ question }) => {
+	return <div>
+		<p>{question}</p>
+		"Question component"
+		</div>;
 }
 
 export default Question;
