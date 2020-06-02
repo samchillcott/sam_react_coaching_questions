@@ -1,15 +1,14 @@
 import React from "react";
-import questions from "./questions.js"
 
-const Question = ({  }) => {
-	
-	const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+const Question = ({ question }) => {
+	// let randomQuestion = question[Math.floor(Math.random() * question.length)];
 
-	
-	return <div>
-		<p>{randomQuestion}</p>
-		"Question component"
-		</div>;
-}
+	return (
+		<div>
+			<p>{question}</p>
+			"Question component"
+		</div>
+	);
+};
 
 export default Question;
