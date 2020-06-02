@@ -39,9 +39,7 @@ const App = () => {
 
 	let randomQuestion = () => {
 		console.log("randomQ triggered");
-		let q = questions;
-		// [Math.floor(Math.random() * questions.length)];
-		q = "test";
+		let q = questions[Math.floor(Math.random() * questions.length)];
 		console.log(q);
 		setQuestion(q);
 		console.log(question);
