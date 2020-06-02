@@ -7,6 +7,13 @@ const Question = ({ question }) => {
 			<button onClick={() => navigator.clipboard.writeText({ question })}>
 				Copy To Clipboard
 			</button>
+			<a
+				class="twitter-share-button"
+				target="_blank"
+				href="https://twitter.com/intent/tweet"
+			>
+				Tweet
+			</a>
 		</div>
 	);
 };
