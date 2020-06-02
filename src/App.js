@@ -8,11 +8,13 @@ function App() {
 
 	// fetch do i need a try and catch? kiss for now
 	const getQuestion = async () => {
+		console.log("getQuestion triggered");
 		try {
-			const response = await fetch();
+			const response = await fetch("/questions.js");
 			if (response.ok) {
 				const data = await response.json();
 				setQuestion(data);
+				console.log(data);
 			}
 		} catch (error) {
 			console.log(error);
@@ -32,7 +34,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<button>Generate</button>
+			<button onClick={getQuestion}>Generate</button>
 			<Question 
 				question={question.question}
 			/>
