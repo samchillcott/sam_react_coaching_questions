@@ -5,3 +5,6 @@ const questions = [
 	"Are there any decisions that you have been avoiding making?",
 	"What’s really going on here?",
 ];
+
+export default questions;
+

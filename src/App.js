@@ -39,15 +39,18 @@ const App = () => {
 
 	let randomQuestion = () => {
 		console.log("randomQ triggered");
-		let q = questions[Math.floor(Math.random() * questions.length)];
+		let q = questions;
+		// [Math.floor(Math.random() * questions.length)];
+		q = "test";
 		console.log(q);
 		setQuestion(q);
+		console.log(question);
 	};
 
 	return (
 		<div className="App">
 			<button onClick={randomQuestion}>Generate</button>
-			<Question question={questions} />
+			<Question question={question} />
 		</div>
 	);
 };
