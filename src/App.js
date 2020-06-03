@@ -26,8 +26,12 @@ const App = () => {
 	// 	}
 	// };
 
+	// let randomQuestion = () => {
+	// 	let q = questions[Math.floor(Math.random() * questions.length)];
+	// 	setQuestion(q);
+	// };
 	let randomQuestion = () => {
-		let q = questions[Math.floor(Math.random() * questions.length)];
+		let q = questions.splice(Math.floor(Math.random() * questions.length), 1);
 		setQuestion(q);
 	};
 
