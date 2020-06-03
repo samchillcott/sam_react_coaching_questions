@@ -30,14 +30,46 @@ const App = () => {
 	// 	let q = questions[Math.floor(Math.random() * questions.length)];
 	// 	setQuestion(q);
 	// };
-	let randomQuestion = () => {
-		let q = questions.splice(Math.floor(Math.random() * questions.length), 1);
-		setQuestion(q);
-	};
+
+	// let randomQuestion = () => {
+	// 	let q = questions.splice(Math.floor(Math.random() * questions.length), 1);
+	// 	setQuestion(q);
+	// };
+
+	// debugger
+
+	function randomize(arr) {
+		let data = [...arr];
+		let chosenItems = [];
+
+		function getRandomValue() {
+			if (data.length === 0) {
+				data = chosenItems;
+				chosenItems = [];
+			}
+			const index = Math.floor(Math.random() * data.length);
+			const choice = data.splice(index, 1)[0];
+
+			chosenItems.push(choice);
+		}
+
+		return {
+			randomItem: getRandomValue,
+		};
+	}
+
+	const randomizeData = randomize(questions);
+	console.log(randomizeData);
+	for (let i = 0; i < questions.length; i++) {
+		// console.log(randomizeData.randomItem());
+		let nextQuestion = randomizeData.randomItem;
+		console.log(nextQuestion);
+		setQuestion(nextQuestion);
+	}
 
 	return (
 		<div className="App">
-			<button onClick={randomQuestion}>Generate</button>
+			<button onClick={randomize}>Generate</button>
 			<Question question={question} />
 		</div>
 	);
