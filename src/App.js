@@ -11,21 +11,6 @@ const App = () => {
 	// state
 	const [question, setQuestion] = useState("");
 
-	// fetch do i need a try and catch? kiss for now
-	// const getQuestion = async () => {
-	// 	console.log("getQuestion triggered");
-	// 	try {
-	// 		const response = await fetch("/questions.js");
-	// 		if (response.ok) {
-	// 			const data = await response.json();
-	// 			setQuestion(data);
-	// 			console.log(data);
-	// 		}
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// };
-
 	// let randomQuestion = () => {
 	// 	let q = questions[Math.floor(Math.random() * questions.length)];
 	// 	setQuestion(q);
@@ -35,41 +20,36 @@ const App = () => {
 	// 	let q = questions.splice(Math.floor(Math.random() * questions.length), 1);
 	// 	setQuestion(q);
 	// };
+	debugger;
+	let data = [...questions];
+	let chosenItems = [];
 
-	// debugger
+	console.log(data);
+	console.log(chosenItems);
 
-	function randomize(arr) {
-		let data = [...arr];
-		let chosenItems = [];
+	let randomQuestion = () => {
+		console.log("RQ called");
 
-		function getRandomValue() {
-			if (data.length === 0) {
-				data = chosenItems;
-				chosenItems = [];
-			}
-			const index = Math.floor(Math.random() * data.length);
-			const choice = data.splice(index, 1)[0];
-
+		if (data.length === 0) {
+			data = chosenItems;
+			chosenItems = [];
+		} else {
+			let spliceIndex = Math.floor(Math.random() * data.length);
+			let choice = data.splice(spliceIndex, 1);
 			chosenItems.push(choice);
 		}
 
-		return {
-			randomItem: getRandomValue,
-		};
-	}
+		console.log(data);
+		console.log(chosenItems);
 
-	const randomizeData = randomize(questions);
-	console.log(randomizeData);
-	for (let i = 0; i < questions.length; i++) {
-		// console.log(randomizeData.randomItem());
-		let nextQuestion = randomizeData.randomItem;
-		console.log(nextQuestion);
-		setQuestion(nextQuestion);
-	}
+		// grab a question from the data array at a random index
+		let selectedQuestion = data[Math.floor(Math.random() * data.length)];
+		setQuestion(selectedQuestion);
+	};
 
 	return (
 		<div className="App">
-			<button onClick={randomize}>Generate</button>
+			<button onClick={randomQuestion}>Generate</button>
 			<Question question={question} />
 		</div>
 	);
