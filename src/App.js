@@ -20,7 +20,7 @@ const App = () => {
 	// 	let q = questions.splice(Math.floor(Math.random() * questions.length), 1);
 	// 	setQuestion(q);
 	// };
-	debugger;
+
 	let data = [...questions];
 	let chosenItems = [];
 
@@ -33,18 +33,22 @@ const App = () => {
 		if (data.length === 0) {
 			data = chosenItems;
 			chosenItems = [];
-		} else {
-			let spliceIndex = Math.floor(Math.random() * data.length);
-			let choice = data.splice(spliceIndex, 1);
-			chosenItems.push(choice);
 		}
+		let spliceIndex = Math.floor(Math.random() * data.length);
+		let choice = data.splice(spliceIndex, 1);
+		chosenItems.push(choice);
+		console.log("choice" + choice);
 
 		console.log(data);
 		console.log(chosenItems);
 
 		// grab a question from the data array at a random index
-		let selectedQuestion = data[Math.floor(Math.random() * data.length)];
-		setQuestion(selectedQuestion);
+		// let selectedQuestion = data[Math.floor(Math.random() * data.length)];
+		// console.log(selectedQuestion);
+
+		console.log(question);
+		setQuestion(choice);
+		console.log(question);
 	};
 
 	return (
