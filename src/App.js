@@ -9,7 +9,7 @@ import questions from "./questions.js";
 
 const App = () => {
 	// state
-	const [question, setQuestion] = useState("");
+	const [question, setQuestion] = useState("Click Generate to Start");
 
 	// let randomQuestion = () => {
 	// 	let q = questions[Math.floor(Math.random() * questions.length)];
@@ -20,7 +20,7 @@ const App = () => {
 	// 	let q = questions.splice(Math.floor(Math.random() * questions.length), 1);
 	// 	setQuestion(q);
 	// };
-
+	console.log("top of app = reset");
 	let data = [...questions];
 	let chosenItems = [];
 
@@ -37,10 +37,10 @@ const App = () => {
 		let spliceIndex = Math.floor(Math.random() * data.length);
 		let choice = data.splice(spliceIndex, 1);
 		chosenItems.push(choice);
-		console.log("choice" + choice);
+		console.log("choice = " + choice);
 
-		console.log(data);
-		console.log(chosenItems);
+		// console.log(data);
+		// console.log(chosenItems);
 
 		// grab a question from the data array at a random index
 		// let selectedQuestion = data[Math.floor(Math.random() * data.length)];
