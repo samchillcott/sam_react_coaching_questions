@@ -8,7 +8,7 @@ const Question = ({ question }) => {
 				Copy To Clipboard
 			</button>
 			<a
-				class="twitter-share-button"
+				className="twitter-share-button"
 				// eslint-disable-next-line
 				target="_blank"
 				href="https://twitter.com/intent/tweet"
