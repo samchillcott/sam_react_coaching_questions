@@ -39,8 +39,7 @@ const App = () => {
 		let q = randomizeData.randomItem();
 		console.log(q);
 		setQuestion(q);
-
-		// setQuestion(randomQuestion);
+		console.log(data);
 	};
 
 	return (
