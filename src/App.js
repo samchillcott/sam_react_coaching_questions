@@ -35,8 +35,12 @@ const App = () => {
 	const randomizeData = randomize(questions);
 
 	let randomQuestion = () => {
-		randomizeData.randomItem();
-		setQuestion(randomQuestion);
+		console.log("RQ called");
+		let q = randomizeData.randomItem();
+		console.log(q);
+		setQuestion(q);
+
+		// setQuestion(randomQuestion);
 	};
 
 	return (
