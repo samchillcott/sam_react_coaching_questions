@@ -1,9 +1,8 @@
 import React from "react";
 
 const Question = ({ question }) => {
-	
 	const questionString = question.toString();
-	
+
 	return (
 		<div>
 			<p>{question}</p>
@@ -14,7 +13,7 @@ const Question = ({ question }) => {
 				className="twitter-share-button"
 				// eslint-disable-next-line
 				target="_blank"
-				href={`https://twitter.com/intent/tweet?text=${questionString}`}
+				href={`https://twitter.com/intent/tweet?text=${questionString}. Generated from Sams Coaching Question App`}
 			>
 				Tweet
 			</a>
