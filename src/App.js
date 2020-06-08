@@ -1,5 +1,5 @@
 // react and state
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // Question component
 import Question from "./Question";
 // App style sheet
@@ -13,8 +13,9 @@ const App = () => {
 
 	const [question, setQuestion] = useState("Click Generate to Start");
 
-	let data = [...questions];
-	let chosenItems = [];
+	let [data, setData] = useState([...questions]);
+	let [chosenItems, setChosenItems] = useState([]);
+
 
 	console.log(data);
 	console.log("^^ data at top of app = reset");
@@ -27,11 +28,11 @@ const App = () => {
 			}
 			const index = Math.floor(Math.random() * data.length);
 			const choice = data.splice(index, 1)[0];
-
+			setData(data)
 			console.log(data);
 			console.log("^^ data afer splice");
-
 			chosenItems.push(choice);
+			setChosenItems(chosenItems);
 			return choice;
 		}
 
