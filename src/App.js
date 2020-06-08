@@ -46,9 +46,9 @@ const App = () => {
 	let randomQuestion = () => {
 		console.log("RQ called");
 		let q = randomizeData.randomItem();
-		console.log(q);
+		// console.log(q);
 		setQuestion(q);
-		// console.log(data);
+		// console.log(question);
 	};
 
 	// useEffect(() => {
