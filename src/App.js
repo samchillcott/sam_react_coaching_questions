@@ -28,8 +28,8 @@ const App = () => {
 			const index = Math.floor(Math.random() * data.length);
 			const choice = data.splice(index, 1)[0];
 			setData(data);
-			console.log(data);
-			console.log("^^ data afer splice");
+			// console.log(data);
+			// console.log("^^ data after splice");
 			chosenItems.push(choice);
 			setChosenItems(chosenItems);
 			return choice;

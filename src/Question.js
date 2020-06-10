@@ -13,9 +13,12 @@ const Question = ({ question }) => {
 						: "share_bar_visible"
 				}
 			>
-				<button onClick={() => navigator.clipboard.writeText(questionString)}>
-					Copy To Clipboard
-				</button>
+				<i
+					className="fa fa-clipboard"
+					aria-hidden="true"
+					onClick={() => navigator.clipboard.writeText(questionString)}
+				></i>
+
 				<a
 					className="twitter-share-button"
 					// eslint-disable-next-line
