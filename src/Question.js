@@ -6,7 +6,13 @@ const Question = ({ question }) => {
 	return (
 		<div>
 			<p>{question}</p>
-			<div className="share_bar">
+			<div
+				className={
+					question === "Click Generate to Start"
+						? "share_bar_hidden"
+						: "share_bar_visible"
+				}
+			>
 				<button onClick={() => navigator.clipboard.writeText(questionString)}>
 					Copy To Clipboard
 				</button>
