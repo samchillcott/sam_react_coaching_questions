@@ -18,7 +18,6 @@ const Question = ({ question }) => {
 					aria-hidden="true"
 					onClick={() => navigator.clipboard.writeText(questionString)}
 				></i>
-
 				<a
 					className="twitter-share-button"
 					// eslint-disable-next-line
@@ -27,6 +26,11 @@ const Question = ({ question }) => {
 				>
 					Tweet
 				</a>
+				<script
+					async
+					src="https://platform.twitter.com/widgets.js"
+					charset="utf-8"
+				></script>
 			</div>
 		</div>
 	);
