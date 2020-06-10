@@ -9,46 +9,43 @@ import questions from "./questions.js";
 
 const App = () => {
 	// state
+	console.log("app code started");
+
 	const [question, setQuestion] = useState("Click Generate to Start");
 
-	// let randomQuestion = () => {
-	// 	let q = questions[Math.floor(Math.random() * questions.length)];
-	// 	setQuestion(q);
-	// };
-
-	// let randomQuestion = () => {
-	// 	let q = questions.splice(Math.floor(Math.random() * questions.length), 1);
-	// 	setQuestion(q);
-	// };
-	console.log("top of app = reset");
-	let data = [...questions];
-	let chosenItems = [];
+	let [data, setData] = useState([...questions]);
+	let [chosenItems, setChosenItems] = useState([]);
 
 	console.log(data);
-	console.log(chosenItems);
+	console.log("^^ data at top of app = reset");
+
+	function randomize() {
+		function getRandomValue() {
+			if (data.length === 0) {
+				data = chosenItems;
+				chosenItems = [];
+			}
+			const index = Math.floor(Math.random() * data.length);
+			const choice = data.splice(index, 1)[0];
+			setData(data);
+			console.log(data);
+			console.log("^^ data afer splice");
+			chosenItems.push(choice);
+			setChosenItems(chosenItems);
+			return choice;
+		}
+
+		return {
+			randomItem: getRandomValue,
+		};
+	}
+
+	const randomizeData = randomize();
 
 	let randomQuestion = () => {
 		console.log("RQ called");
-
-		if (data.length === 0) {
-			data = chosenItems;
-			chosenItems = [];
-		}
-		let spliceIndex = Math.floor(Math.random() * data.length);
-		let choice = data.splice(spliceIndex, 1);
-		chosenItems.push(choice);
-		console.log("choice = " + choice);
-
-		// console.log(data);
-		// console.log(chosenItems);
-
-		// grab a question from the data array at a random index
-		// let selectedQuestion = data[Math.floor(Math.random() * data.length)];
-		// console.log(selectedQuestion);
-
-		console.log(question);
-		setQuestion(choice);
-		console.log(question);
+		let q = randomizeData.randomItem();
+		setQuestion(q);
 	};
 
 	return (
