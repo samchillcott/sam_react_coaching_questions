@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-around;
   font-family: 'Abel', sans-serif;
+  font-size: 1.2rem;
 }
 
 .wrapper {
@@ -19,26 +20,30 @@
 	background-color: cornsilk;
 	justify-content: space-around;
 	padding: 1rem;
-	height: 30vh;
+	height: 40vh;
   width: 75%;
   align-items: center;
+  margin-top: 100px;
 }
 
 button {
   margin: 5px;
   padding: 5px;
   width: 300px;
+  font-family: 'Abel', sans-serif;
+  font-size: 1.4rem;
 }
 
 .question {
-	background-color: blueviolet;
+  /* background-color: blueviolet; */
+  font-size: 2rem;
 }
 
 .share_bar_hidden {
-	display: none;
+	visibility: hidden;;
 }
 
 .share_bar_visible {
-	display: block;
-	margin: 1rem;
+  display: flex;
+  justify-content: space-around;
 }

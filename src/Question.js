@@ -5,7 +5,7 @@ const Question = ({ question }) => {
 
 	return (
 		<div>
-			<p>{question}</p>
+			<p className="question">{question}</p>
 			<div
 				className={
 					question === "Click Generate to Start"
