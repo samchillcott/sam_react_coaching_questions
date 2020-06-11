@@ -50,8 +50,10 @@ const App = () => {
 
 	return (
 		<div className="App">
-			<button onClick={randomQuestion}>Generate</button>
-			<Question question={question} />
+			<div className="wrapper">
+				<button onClick={randomQuestion}>Generate</button>
+				<Question question={question} />
+			</div>
 		</div>
 	);
 };
