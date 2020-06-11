@@ -23,6 +23,7 @@
   width: 75%;
   align-items: center;
   margin-top: 100px;
+  border-radius: 10px;
 }
 
 button {
@@ -31,7 +32,9 @@ button {
   width: 300px;
   font-family: 'Abel', sans-serif;
   font-size: 1.4rem;
-  border-radius: 5px;
+  border-radius: 3px;
+  background: whitesmoke;
+  outline: none;
 }
 
 .question {
