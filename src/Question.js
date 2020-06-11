@@ -13,19 +13,21 @@ const Question = ({ question }) => {
 						: "share_bar_visible"
 				}
 			>
-				<i
-					className="fa fa-clipboard"
-					aria-hidden="true"
-					onClick={() => navigator.clipboard.writeText(questionString)}
-				></i>
-				<a
-					className="twitter-share-button"
-					// eslint-disable-next-line
-					target="_blank"
-					href={`https://twitter.com/intent/tweet?text="${questionString}" Generated from Sam's Coaching Question App`}
-				>
-					Tweet
-				</a>
+				<div className="icon_wrapper">
+					<i
+						className="fa fa-clipboard"
+						aria-hidden="true"
+						onClick={() => navigator.clipboard.writeText(questionString)}
+					></i>
+					<a
+						className="twitter-share-button"
+						// eslint-disable-next-line
+						target="_blank"
+						href={`https://twitter.com/intent/tweet?text="${questionString}" Generated from Sam's Coaching Question App`}
+					>
+						Tweet
+					</a>
+				</div>
 			</div>
 		</div>
 	);
