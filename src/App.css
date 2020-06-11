@@ -20,14 +20,14 @@
 	background-color: cornsilk;
 	justify-content: space-around;
 	padding: 1rem;
-	height: 40vh;
+	height: 50vh;
   width: 75%;
   align-items: center;
   margin-top: 100px;
 }
 
 button {
-  margin: 5px;
+  /* margin: 5px; */
   padding: 5px;
   width: 300px;
   font-family: 'Abel', sans-serif;

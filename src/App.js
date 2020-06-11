@@ -51,6 +51,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<div className="wrapper">
+				<h1>Coaching Question Generator</h1>
 				<button onClick={randomQuestion}>Generate</button>
 				<Question question={question} />
 			</div>
