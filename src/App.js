@@ -66,7 +66,6 @@ const App = () => {
 					<div className="icon_wrapper">
 						<i
 							className="fa fa-clipboard"
-							aria-hidden="true"
 							onClick={() => navigator.clipboard.writeText(questionString)}
 						></i>
 						<a
