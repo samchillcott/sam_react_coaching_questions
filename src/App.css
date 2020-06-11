@@ -36,6 +36,7 @@ button {
 .question {
   /* background-color: blueviolet; */
   font-size: 2rem;
+  height: 150px;
 }
 
 .share_bar_hidden {

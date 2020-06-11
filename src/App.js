@@ -13,6 +13,8 @@ const App = () => {
 
 	const [question, setQuestion] = useState("Click Generate to Start");
 
+	const questionString = question.toString();
+
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
 
@@ -54,6 +56,29 @@ const App = () => {
 				<h1>Coaching Question Generator</h1>
 				<button onClick={randomQuestion}>Generate</button>
 				<Question question={question} />
+				<div
+				className={
+					question === "Click Generate to Start"
+						? "share_bar_hidden"
+						: "share_bar_visible"
+				}
+			>
+				<div className="icon_wrapper">
+					<i
+						className="fa fa-clipboard"
+						aria-hidden="true"
+						onClick={() => navigator.clipboard.writeText(questionString)}
+					></i>
+					<a
+						className="twitter-share-button"
+						// eslint-disable-next-line
+						target="_blank"
+						href={`https://twitter.com/intent/tweet?text="${questionString}" Generated from Sam's Coaching Question App`}
+					>
+						Tweet
+					</a>
+				</div>
+			</div>
 			</div>
 		</div>
 	);
