@@ -11,7 +11,7 @@ const App = () => {
 	// state
 	console.log("app code started");
 
-	const [question, setQuestion] = useState("Click Generate to Start");
+	const [question, setQuestion] = useState("Click Button to Start");
 
 	const questionString = question.toString();
 
@@ -58,7 +58,7 @@ const App = () => {
 				<Question question={question} />
 				<div
 					className={
-						question === "Click Generate to Start"
+						question === "Click Button to Start"
 							? "share_bar_hidden"
 							: "share_bar_visible"
 					}
@@ -75,7 +75,6 @@ const App = () => {
 							target="_blank"
 							href={`https://twitter.com/intent/tweet?text="${questionString}" Generated from Sam's Coaching Question App`}
 						>
-							Tweet
 						</a>
 					</div>
 				</div>
