@@ -48,14 +48,14 @@ button {
 }
 
 .share_bar_hidden {
-  /* visibility: hidden; */
+  visibility: hidden;
   /* background-color: yellowgreen; */
   /* display: none; */
 }
 
 .share_bar_visible {
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  justify-content: center;
   /* background-color: violet; */
 }
 
@@ -64,6 +64,10 @@ display: flex;
 justify-content: space-around;
 /* background-color: crimson; */
 width: 200px;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media(min-width: 768px){
