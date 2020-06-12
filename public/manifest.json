@@ -1,9 +1,9 @@
 {
 	"short_name": "Coaching Questions",
-	"name": "Coaching Qs JSON",
+	"name": "Coaching Qs",
 	"icons": [
 		{
-			"src": "questionmark.ico",
+			"src": "favicon.ico",
 			"sizes": "64x64 32x32 24x24 16x16",
 			"type": "image/x-icon"
 		},

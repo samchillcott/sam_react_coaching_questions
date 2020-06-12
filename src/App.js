@@ -72,7 +72,8 @@ const App = () => {
 							className="twitter-share-button"
 							// eslint-disable-next-line
 							target="_blank"
-							href={`https://twitter.com/intent/tweet?text="${questionString}" Generated from Sam's Coaching Question App`}
+
+							href={`https://twitter.com/intent/tweet?text="${questionString}" - Generated from Sam's Coaching Question App: `}
 						>Tweet
 						</a>
 					</div>
