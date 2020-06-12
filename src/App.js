@@ -69,13 +69,15 @@ const App = () => {
 							onClick={() => navigator.clipboard.writeText(questionString)}
 						></i>
 						<a
-							// className="twitter-share-button"
+							className="twitter-share-button"
 							// eslint-disable-next-line
 							target="_blank"
-							href={`https://twitter.com/intent/tweet?text="${questionString}" - Generated from Sam's Coaching Question App: `}
+							href={`https://twitter.com/intent/tweet?text="${questionString}" - Generated from Sam's Coaching Question App `}
 						>
 							Tweet
 						</a>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 					</div>
 				</div>
 			</div>

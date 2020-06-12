@@ -47,11 +47,18 @@ button {
   align-content: center;
 }
 
-.share_bar_hidden {
-  visibility: hidden;
+.share_bar_hidden  {
+  visibility: hidden !important; 
   /* background-color: yellowgreen; */
   /* display: none; */
+  height: 0;
+  width: 0;
+  border: 0;
+  justify-content: center;
 }
+/* .share_bar_hidden twitter-share-button {
+  visibility: hidden;
+} */
 
 .share_bar_visible {
   display: flex;
