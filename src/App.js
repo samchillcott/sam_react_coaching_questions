@@ -9,15 +9,15 @@ import questions from "./questions.js";
 
 const App = () => {
 	// state
-	console.log("app code started");
+	// console.log("app code started");
 
 	const [question, setQuestion] = useState("Click Button to Start");
 
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
 
-	console.log(data);
-	console.log("^^ data at top of app = reset");
+	// console.log(data);
+	// console.log("^^ data at top of app = reset");
 
 	function randomize() {
 		function getRandomValue() {
@@ -43,7 +43,7 @@ const App = () => {
 	const randomizeData = randomize();
 
 	let randomQuestion = () => {
-		console.log("RQ called");
+		// console.log("RQ called");
 		let q = randomizeData.randomItem();
 		setQuestion(q);
 	};
@@ -72,9 +72,9 @@ const App = () => {
 							className="twitter-share-button"
 							// eslint-disable-next-line
 							target="_blank"
-
 							href={`https://twitter.com/intent/tweet?text="${questionString}" - Generated from Sam's Coaching Question App: `}
-						>Tweet
+						>
+							Tweet
 						</a>
 					</div>
 				</div>
