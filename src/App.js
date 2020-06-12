@@ -13,8 +13,6 @@ const App = () => {
 
 	const [question, setQuestion] = useState("Click Button to Start");
 
-	const questionString = question.toString();
-
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
 
@@ -49,6 +47,8 @@ const App = () => {
 		let q = randomizeData.randomItem();
 		setQuestion(q);
 	};
+
+	const questionString = question.toString();
 
 	return (
 		<div className="App">
