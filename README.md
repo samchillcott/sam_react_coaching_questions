@@ -50,4 +50,4 @@
 ## Watch Me Build This
 
 - #100daysofcode 58-67.
-- [Daily Videos - Instagram](https://www.instagram.com/p/CA5KhBDA_9i/)
+- [Daily Videos - Instagram](https://www.instagram.com/samchillcott/)
