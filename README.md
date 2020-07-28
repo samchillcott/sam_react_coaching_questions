@@ -1,6 +1,7 @@
 # Coaching Question Generator
 
 - Web app to generate coaching questions at random.
+- Set as challenge by mentor - original spec below.
 - Not built using a follow along tutorial.
 
 ## Tech Used
@@ -51,3 +52,14 @@
 
 - #100daysofcode 58-67.
 - [Daily Videos - Instagram](https://www.instagram.com/samchillcott/)
+
+## Original Spec
+
+1. User presses the button
+2. Randomly choose a question from a list. This could be loaded as a JSON file or otherwise.
+3. Display the question to the user.
+4. OPTIONAL EXTRA - Ensure that questions don't repeat until you've displayed all of the list. This is more of an exercise to think about how it could be done, worry about implementation later.
+
+This functionality is easy for a reason. Don't use any existing code as a shell but write everything from scratch. In future you probably will use some type of pre-built shell that you'd code into, but for sake of burning these neurons in try to write everything without copy-pasting from outside. That being said, don't try to force yourself to remember everything that needs to be written. When you need to, do look up what needs to go where and compare your code with other things you wrote or the web.
+
+Simply avoid defaulting into 'ok, no copy paste, but I'll just continuously switch between the two windows to make sure I don't miss anything'. Nah - give it a shot to code as much as you can until you go blank for 5 seconds, and only then look up, remember, write that and repeat.
