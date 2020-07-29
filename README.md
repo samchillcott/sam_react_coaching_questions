@@ -6,7 +6,7 @@
 
 ## Tech Used
 
-- React.js.
+- React.js (useState).
 - JavaScript.
 - Twitter share.
 - Netlify.
