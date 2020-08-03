@@ -39,6 +39,11 @@ button {
   margin-top: 5px;
 }
 
+button:hover {
+  background: rgba(245, 245, 245, 0.747);
+
+}
+
 .question {
   /* background-color: blueviolet; */
   font-size: 2rem;
@@ -48,7 +53,7 @@ button {
 }
 
 .share_bar_hidden {
-  visibility: hidden;
+  /* visibility: hidden; */
   background-color: yellowgreen;
   /* display: none; */
 }

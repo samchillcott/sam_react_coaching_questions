@@ -4,7 +4,7 @@ import "./App.css";
 import questions from "./questions.js";
 
 const App = () => {
-	const [question, setQuestion] = useState("Click Button to Start");
+	let [question, setQuestion] = useState("Click Button to Start");
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
 
@@ -28,7 +28,7 @@ const App = () => {
 		setQuestion(chosenQuestion);
 	};
 
-	const questionString = question.toString();
+	let questionString = question.toString();
 
 	return (
 		<div className="App">
@@ -58,6 +58,8 @@ const App = () => {
 						>
 							Tweet
 						</a>
+						{console.log(questionString)}
+
 					</div>
 				</div>
 			</div>
