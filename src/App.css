@@ -53,7 +53,7 @@ button:hover {
 }
 
 .share_bar_hidden {
-	/* visibility: hidden; */
+	visibility: hidden;
 	background-color: yellowgreen;
 	/* display: none; */
 }

@@ -29,6 +29,7 @@ const App = () => {
 	};
 
 	let questionString = question.toString();
+	console.log(questionString);
 
 	return (
 		<div className="App">
