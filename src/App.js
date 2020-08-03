@@ -15,12 +15,12 @@ const App = () => {
 			chosenItems = [];
 		}
 
-		const selectQuestionFromDataArray = () => {
-			const index = Math.floor(Math.random() * data.length);
-			let choice = data.splice(index, 1)[0];
+		const selectRandomItemFromArray = (arr) => {
+			const index = Math.floor(Math.random() * arr.length);
+			let choice = arr.splice(index, 1)[0];
 			return choice;
 		};
-		let chosenQuestion = selectQuestionFromDataArray();
+		let chosenQuestion = selectRandomItemFromArray(data);
 
 		setData(data);
 		chosenItems.push(chosenQuestion);
@@ -59,7 +59,6 @@ const App = () => {
 							Tweet
 						</a>
 						{console.log(questionString)}
-
 					</div>
 				</div>
 			</div>
