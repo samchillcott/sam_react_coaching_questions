@@ -5,7 +5,7 @@ import questions from "./questions.js";
 
 const App = () => {
 	// state
-	// console.log("app code started");
+	console.log("app code started");
 
 	const [question, setQuestion] = useState("Click Button to Start");
 
@@ -15,34 +15,42 @@ const App = () => {
 	// console.log(data);
 	// console.log("^^ data at top of app = reset");
 
-	function randomize() {
-		function getRandomValue() {
-			if (data.length === 0) {
-				data = chosenItems;
-				chosenItems = [];
-			}
-			const index = Math.floor(Math.random() * data.length);
-			const choice = data.splice(index, 1)[0];
-			setData(data);
-			// console.log(data);
-			// console.log("^^ data after splice");
-			chosenItems.push(choice);
-			setChosenItems(chosenItems);
-			return choice;
+	const randomize = () => {
+		// No repeat array check
+		if (data.length === 0) {
+			data = chosenItems;
+			chosenItems = [];
 		}
 
-		return {
-			randomItem: getRandomValue,
+		const getRandomValue = () => {
+			const index = Math.floor(Math.random() * data.length);
+			let choice = data.splice(index, 1)[0];
+			console.log(choice);
+
+			return choice;
 		};
-	}
+		let chosenQuestion = getRandomValue();
 
-	const randomizeData = randomize();
-
-	let randomQuestion = () => {
-		// console.log("RQ called");
-		let q = randomizeData.randomItem();
-		setQuestion(q);
+		console.log(chosenQuestion);
+		setData(data);
+		console.log(data);
+		// console.log("^^ data after splice");
+		chosenItems.push(chosenQuestion);
+		setChosenItems(chosenItems);
+		setQuestion(chosenQuestion);
 	};
+
+	// return {
+	// 	randomItem: getRandomValue,
+	// };
+
+	// const randomizeData = randomize();
+
+	// let randomQuestion = () => {
+	// 	// console.log("RQ called");
+	// 	let q = randomizeData.randomItem();
+	// 	setQuestion(q);
+	// };
 
 	const questionString = question.toString();
 
@@ -50,7 +58,7 @@ const App = () => {
 		<div className="App">
 			<div className="wrapper">
 				<h1>Coaching Question Generator</h1>
-				<button onClick={randomQuestion}>Generate</button>
+				<button onClick={randomize}>Generate</button>
 				<Question question={question} />
 				<div
 					className={
@@ -63,7 +71,9 @@ const App = () => {
 						<a
 							className="fa fa-clipboard"
 							onClick={() => navigator.clipboard.writeText(questionString)}
-						>Clipboard</a>
+						>
+							Clipboard
+						</a>
 						<a
 							className="twitter-share-button"
 							// eslint-disable-next-line
