@@ -28,6 +28,11 @@
 	border-radius: 10px;
 }
 
+.wrapper a {
+  text-decoration: none;
+  
+}
+
 button {
 	/* margin: 5px; */
 	padding: 5px;
@@ -54,14 +59,14 @@ button:hover {
 
 .share_bar_hidden {
 	visibility: hidden;
-	background-color: yellowgreen;
+	/* background-color: yellowgreen; */
 	/* display: none; */
 }
 
 .share_bar_visible {
 	display: flex;
 	justify-content: center;
-	background-color: violet;
+	/* background-color: violet; */
 }
 
 .icon_wrapper {
