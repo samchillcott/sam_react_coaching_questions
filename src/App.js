@@ -1,10 +1,6 @@
-// react and state
 import React, { useState } from "react";
-// Question component
 import Question from "./Question";
-// App style sheet
 import "./App.css";
-// questions list variable
 import questions from "./questions.js";
 
 const App = () => {
@@ -64,10 +60,10 @@ const App = () => {
 					}
 				>
 					<div className="icon_wrapper">
-						<i
+						<a
 							className="fa fa-clipboard"
 							onClick={() => navigator.clipboard.writeText(questionString)}
-						></i>
+						>Clipboard</a>
 						<a
 							className="twitter-share-button"
 							// eslint-disable-next-line
