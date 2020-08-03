@@ -33,7 +33,7 @@ const App = () => {
 
 		console.log(chosenQuestion);
 		setData(data);
-		console.log(data);
+		// console.log(data);
 		// console.log("^^ data after splice");
 		chosenItems.push(chosenQuestion);
 		setChosenItems(chosenItems);
@@ -72,7 +72,7 @@ const App = () => {
 							className="fa fa-clipboard"
 							onClick={() => navigator.clipboard.writeText(questionString)}
 						>
-							Clipboard
+							 Clipboard
 						</a>
 						<a
 							className="twitter-share-button"

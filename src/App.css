@@ -48,15 +48,15 @@ button {
 }
 
 .share_bar_hidden {
-  /* visibility: hidden; */
-  /* background-color: yellowgreen; */
-  /* display: none; */
+  visibility: hidden;
+  background-color: yellowgreen;
+  display: none;
 }
 
 .share_bar_visible {
-  /* display: flex;
-  justify-content: center; */
-  /* background-color: violet; */
+  display: flex;
+  justify-content: center;
+  background-color: violet;
 }
 
 .icon_wrapper {
