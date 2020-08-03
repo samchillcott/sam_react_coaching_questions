@@ -4,16 +4,9 @@ import "./App.css";
 import questions from "./questions.js";
 
 const App = () => {
-	// state
-	console.log("app code started");
-
 	const [question, setQuestion] = useState("Click Button to Start");
-
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
-
-	// console.log(data);
-	// console.log("^^ data at top of app = reset");
 
 	const randomize = () => {
 		// No repeat array check
@@ -22,35 +15,18 @@ const App = () => {
 			chosenItems = [];
 		}
 
-		const getRandomValue = () => {
+		const selectQuestionFromDataArray = () => {
 			const index = Math.floor(Math.random() * data.length);
 			let choice = data.splice(index, 1)[0];
-			console.log(choice);
-
 			return choice;
 		};
-		let chosenQuestion = getRandomValue();
+		let chosenQuestion = selectQuestionFromDataArray();
 
-		console.log(chosenQuestion);
 		setData(data);
-		// console.log(data);
-		// console.log("^^ data after splice");
 		chosenItems.push(chosenQuestion);
 		setChosenItems(chosenItems);
 		setQuestion(chosenQuestion);
 	};
-
-	// return {
-	// 	randomItem: getRandomValue,
-	// };
-
-	// const randomizeData = randomize();
-
-	// let randomQuestion = () => {
-	// 	// console.log("RQ called");
-	// 	let q = randomizeData.randomItem();
-	// 	setQuestion(q);
-	// };
 
 	const questionString = question.toString();
 
@@ -72,7 +48,7 @@ const App = () => {
 							className="fa fa-clipboard"
 							onClick={() => navigator.clipboard.writeText(questionString)}
 						>
-							 Clipboard
+							Clipboard
 						</a>
 						<a
 							className="twitter-share-button"
