@@ -25,7 +25,7 @@ const App = () => {
 	};
 
 	let questionString = question.toString();
-	console.log(questionString);
+	// console.log(questionString);
 
 	return (
 		<div className="App">
@@ -56,7 +56,7 @@ const App = () => {
 						>
 							Tweet
 						</a>
-						{console.log(questionString)}
+						{/* {console.log(questionString)} */}
 					</div>
 				</div>
 			</div>
