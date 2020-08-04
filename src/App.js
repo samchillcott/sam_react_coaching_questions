@@ -4,7 +4,6 @@ import "./App.css";
 import questions from "./questions.js";
 const { selectRandomItemFromArray } = require("./utils");
 
-
 const App = () => {
 	let [question, setQuestion] = useState("Click Button to Start");
 	let [data, setData] = useState([...questions]);
