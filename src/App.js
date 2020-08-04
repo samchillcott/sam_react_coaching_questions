@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Question from "./Question";
 import "./App.css";
 import questions from "./questions.js";
+const { selectRandomItemFromArray } = require("./utils");
+
 
 const App = () => {
 	let [question, setQuestion] = useState("Click Button to Start");
@@ -15,11 +17,6 @@ const App = () => {
 			chosenItems = [];
 		}
 
-		const selectRandomItemFromArray = (arr) => {
-			const index = Math.floor(Math.random() * arr.length);
-			let choice = arr.splice(index, 1)[0];
-			return choice;
-		};
 		let chosenQuestion = selectRandomItemFromArray(data);
 
 		setData(data);
