@@ -8,13 +8,13 @@ test("should select an item from an array at random", () => {
 	expect(selectRandomItemFromArray([1, 2])).toBeOneOf([1, 2]);
 	expect(selectRandomItemFromArray([43, 44, 45])).toBeOneOf([43, 44, 45]);
 	expect(() => {
-		selectRandomItemFromArray(null).toThrow(TypeError);
+		selectRandomItemFromArray(null).toThrow("Item is not an array");
 	});
 	expect(() => {
 		selectRandomItemFromArray([]).toThrow(TypeError);
 	});
 	expect(() => {
-		selectRandomItemFromArray("I am a string not an Array").toThrow(TypeError);
+		selectRandomItemFromArray("I am a string not an Array").toThrow("Item is not an array");
 	});
 });
 
