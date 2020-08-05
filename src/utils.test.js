@@ -4,19 +4,25 @@ const { toBeOneOf } = require("./setupTests");
 
 // Unit Tests
 
-test("should select an item from an array at random", () => {
-	expect(selectRandomItemFromArray([1, 2])).toBeOneOf([1, 2]);
-	expect(selectRandomItemFromArray([43, 44, 45])).toBeOneOf([43, 44, 45]);
-	expect(() => {
-		selectRandomItemFromArray(null).toThrow("Input is not an array");
+describe("selectRandomItemFromArray function", () => {
+	test("should select an item from an array at random", () => {
+		expect(selectRandomItemFromArray([1, 2])).toBeOneOf([1, 2]);
+		expect(selectRandomItemFromArray([43, 44, 45])).toBeOneOf([43, 44, 45]);
 	});
-	expect(() => {
-		selectRandomItemFromArray([]).toThrow("Array is empty");
+	test("should throw an error if not passed an array", () => {
+		expect(() => {
+			selectRandomItemFromArray(null).toThrow("Input is not an array");
+		});
+		expect(() => {
+			selectRandomItemFromArray("I am a string not an Array").toThrow(
+				"Input is not an array"
+			);
+		});
 	});
-	expect(() => {
-		selectRandomItemFromArray("I am a string not an Array").toThrow(
-			"Input is not an array"
-		);
+	test("should throw an error is array is empty", () => {
+		expect(() => {
+			selectRandomItemFromArray([]).toThrow("Array is empty");
+		});
 	});
 });
 
