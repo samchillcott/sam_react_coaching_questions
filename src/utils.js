@@ -1,6 +1,6 @@
 const selectRandomItemFromArray = (arr) => {
 	if (arr.constructor !== Array) {
-		throw "Item is not an array";
+		throw "Input is not an array";
 	} else if (arr.length === 0) {
 		throw "Array is empty";
 	} else {
