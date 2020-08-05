@@ -26,7 +26,9 @@ describe("selectRandomItemFromArray function", () => {
 	});
 	test("should throw an error if array contains a non number", () => {
 		expect(() => {
-			selectRandomItemFromArray([1, 2, 'cheeky']).toThrow("Array contains a non-integer");
+			selectRandomItemFromArray([1, 2, "cheeky"]).toThrow(
+				"Array contains a non-integerrrrrrrr"
+			);
 		});
 	});
 });
