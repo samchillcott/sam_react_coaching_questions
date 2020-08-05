@@ -21,17 +21,17 @@ describe("selectRandomItemFromArray function", () => {
 	});
 	it("should throw an error if array is empty", () => {
 		expect(() => {
-			selectRandomItemFromArray([]).toThrow("Array is empty");
+			selectRandomItemFromArray([]).toThrow(new Error("Array is empty"));
 		});
 	});
 	it("should throw an error if array contains a non number", () => {
 		expect(() => {
 			selectRandomItemFromArray([1, 2, "cheeky"]).toThrow(
-				"Array contains a non-integerrrrrrrr"
+				'Array contains a non-integer'
 			);
 		});
 	});
-});
+}, 30000);
 
 // Integration Tests
 
