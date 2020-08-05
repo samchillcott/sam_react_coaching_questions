@@ -5,11 +5,11 @@ const { toBeOneOf } = require("./setupTests");
 // Unit Tests
 
 describe("selectRandomItemFromArray function", () => {
-	test("should select an item from an array at random", () => {
+	it("should select an item from an array at random", () => {
 		expect(selectRandomItemFromArray([1, 2])).toBeOneOf([1, 2]);
 		expect(selectRandomItemFromArray([43, 44, 45])).toBeOneOf([43, 44, 45]);
 	});
-	test("should throw an error if not passed an array", () => {
+	it("should throw an error if not passed an array", () => {
 		expect(() => {
 			selectRandomItemFromArray(null).toThrow("Input is not an array");
 		});
@@ -19,12 +19,12 @@ describe("selectRandomItemFromArray function", () => {
 			);
 		});
 	});
-	test("should throw an error if array is empty", () => {
+	it("should throw an error if array is empty", () => {
 		expect(() => {
 			selectRandomItemFromArray([]).toThrow("Array is empty");
 		});
 	});
-	test("should throw an error if array contains a non number", () => {
+	it("should throw an error if array contains a non number", () => {
 		expect(() => {
 			selectRandomItemFromArray([1, 2, "cheeky"]).toThrow(
 				"Array contains a non-integerrrrrrrr"
