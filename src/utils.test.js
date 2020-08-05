@@ -11,7 +11,7 @@ test("should select an item from an array at random", () => {
 		selectRandomItemFromArray(null).toThrow("Item is not an array");
 	});
 	expect(() => {
-		selectRandomItemFromArray([]).toThrow(TypeError);
+		selectRandomItemFromArray([]).toThrow("Array is empty");
 	});
 	expect(() => {
 		selectRandomItemFromArray("I am a string not an Array").toThrow("Item is not an array");
