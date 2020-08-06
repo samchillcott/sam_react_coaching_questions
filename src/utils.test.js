@@ -47,7 +47,7 @@ describe("randomize function", () => {
 
 // e2e Test
 describe("e2e Test", () => {
-	test("should display random question inside question component", async () => {
+	test("should display random question inside question component when button clicked", async () => {
 		const browser = await puppeteer.launch({
 			headless: false,
 			slowMo: 80,
