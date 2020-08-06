@@ -1,6 +1,7 @@
 const { selectRandomItemFromArray } = require("./utils");
 const puppeteer = require("puppeteer");
 const { toBeOneOf } = require("./setupTests");
+const {questions} = require("./questions");
 
 // Unit Tests
 
@@ -34,5 +35,14 @@ describe("selectRandomItemFromArray function", () => {
 }, 30000);
 
 // Integration Tests
+
+describe("randomize function", () => {
+	it("should select an item from the data (copy of questions) array at random", () => {
+		let data = questions
+		choice = selectRandomItemFromArray(data);
+		expect(choice).toBeOneOf(data);
+	});
+});
+
 
 // e2e Test
