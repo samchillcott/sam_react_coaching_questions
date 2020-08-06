@@ -3,12 +3,12 @@ const selectRandomItemFromArray = (arr) => {
 		throw new Error("Input is not an array");
 	} else if (arr.length === 0) {
 		throw new Error("Array is empty");
-	} else if (
-		arr.every(function (element) {
-			return typeof element !== "number";
-		})
-	) {
-		throw new Error("Array contains a non-integer");
+	// } else if (
+	// 	arr.every(function (element) {
+	// 		return typeof element !== "number";
+	// 	})
+	// ) {
+	// 	throw new Error("Array contains a non-integer");
 	} else {
 		const index = Math.floor(Math.random() * arr.length);
 		let choice = arr.splice(index, 1)[0];

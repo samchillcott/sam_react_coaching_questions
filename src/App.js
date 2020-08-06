@@ -9,20 +9,36 @@ const App = () => {
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
 
-	const randomize = () => {
+	// const randomize = () => {
+	// 	// No repeat array check
+	// 	if (data.length === 0) {
+	// 		data = chosenItems;
+	// 		chosenItems = [];
+	// 	}
+
+	// 	let chosenQuestion = selectRandomItemFromArray(data);
+
+	// 	setData(data);
+	// 	chosenItems.push(chosenQuestion);
+	// 	setChosenItems(chosenItems);
+	// 	setQuestion(chosenQuestion);
+	// };
+
+	const randomize = (arr1, arr2, arr1Setter, arr2Setter, stateSetter) => {
 		// No repeat array check
-		if (data.length === 0) {
-			data = chosenItems;
-			chosenItems = [];
+		if (arr1.length === 0) {
+			arr1 = arr2;
+			arr2 = [];
 		}
 
-		let chosenQuestion = selectRandomItemFromArray(data);
+		let chosenQuestion = selectRandomItemFromArray(arr1);
 
-		setData(data);
-		chosenItems.push(chosenQuestion);
-		setChosenItems(chosenItems);
-		setQuestion(chosenQuestion);
+		arr2.push(chosenQuestion);
+		arr1Setter(arr1);
+		arr2Setter(arr2);
+		stateSetter(chosenQuestion);
 	};
+
 
 	let questionString = question.toString();
 	// console.log(questionString);
@@ -31,7 +47,7 @@ const App = () => {
 		<div className="App">
 			<div className="wrapper">
 				<h1>Coaching Question Generator</h1>
-				<button onClick={randomize}>Generate</button>
+				<button onClick={() => randomize(data, chosenItems, setData, setChosenItems, setQuestion)}>Generate</button>
 				<Question question={question} />
 				<div
 					className={
