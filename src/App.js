@@ -47,7 +47,7 @@ const App = () => {
 		<div className="App">
 			<div className="wrapper">
 				<h1>Coaching Question Generator</h1>
-				<button onClick={() => randomize(data, chosenItems, setData, setChosenItems, setQuestion)}>Generate</button>
+				<button className="button" onClick={() => randomize(data, chosenItems, setData, setChosenItems, setQuestion)}>Generate</button>
 				<Question question={question} />
 				<div
 					className={
