@@ -23,9 +23,8 @@ describe("e2e Test", () => {
 			args: ["--window-size=1000,500"],
 		});
 		const page = await browser.newPage();
-		await page.goto(
-			"file:///Users/samchillcott/Desktop/DESK/CODE/GH Repos/sam_react_coaching_questions/public/index.html"
-		);
+		await page.goto('http://localhost:3000/');
+
 		// await page.click("button");
 		// await page.type("input#name", "Anna");
 		// await page.click("input#age");
