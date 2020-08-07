@@ -1,4 +1,9 @@
 // Integration Tests
+const { selectRandomItemFromArray } = require("./utils");
+const puppeteer = require("puppeteer");
+const { toBeOneOf } = require("./setupTests");
+const { questions } = require("./questions");
+
 
 describe("randomize function", () => {
 	it("should select an item from the data (copy of questions) array at random", () => {
