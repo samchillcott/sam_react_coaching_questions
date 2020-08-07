@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Question from "./Question";
 import "./App.css";
-import questions from "./questions.js";
+// import questions from "./questions.js";
+const { questions } = require("./questions.js");
 const { selectRandomItemFromArray } = require("./utils");
 
 const App = () => {
@@ -39,7 +40,6 @@ const App = () => {
 		stateSetter(chosenQuestion);
 	};
 
-
 	let questionString = question.toString();
 	// console.log(questionString);
 
@@ -47,7 +47,14 @@ const App = () => {
 		<div className="App">
 			<div className="wrapper">
 				<h1>Coaching Question Generator</h1>
-				<button className="button" onClick={() => randomize(data, chosenItems, setData, setChosenItems, setQuestion)}>Generate</button>
+				<button
+					className="button"
+					onClick={() =>
+						randomize(data, chosenItems, setData, setChosenItems, setQuestion)
+					}
+				>
+					Generate
+				</button>
 				<Question question={question} />
 				<div
 					className={
