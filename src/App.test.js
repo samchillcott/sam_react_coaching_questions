@@ -7,10 +7,11 @@ const { questions } = require("./questions");
 
 describe("randomize function", () => {
 	it("should select an item from the data (copy of questions) array at random", () => {
-		// let arr1 = questions;
-		// let choice = selectRandomItemFromArray(questions);
+        // let arr1 = questions;
+        let data = [...questions];
+		let choice = selectRandomItemFromArray(data);
 		// expect(choice).toBeOneOf(questions);
-		expect(selectRandomItemFromArray(questions)).toBeOneOf(questions);
+		expect(choice).toBeOneOf(questions);
 	});
 });
 
@@ -20,17 +21,14 @@ describe("e2e Test", () => {
 		const browser = await puppeteer.launch({
 			headless: false,
 			slowMo: 80,
-			args: ["--window-size=1000,500"],
+			args: ["--window-size=1000,800"],
 		});
 		const page = await browser.newPage();
 		await page.goto('http://localhost:3000/');
 
-		// await page.click("button");
-		// await page.type("input#name", "Anna");
-		// await page.click("input#age");
-		// await page.type("input#age", "28");
-		// await page.click("#btnAddUser");
-		// const question = await page.$eval(".user-item", (el) => el.textContent);
-		// expect(question).toBeOneOf(questions);
-	}, 20000);
+		await page.click("button");
+	
+		let question = await page.$eval(".question", (el) => el.textContent);
+		expect(question).toBeOneOf(questions);
+	}, 300000);
 });
