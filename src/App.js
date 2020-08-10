@@ -69,7 +69,7 @@ const App = () => {
 							className="hvr-backward"
 						>
 							<i className="fa fa-clipboard"></i>
-							Clipboard
+							 Clipboard
 						</a>
 						<a
 							// eslint-disable-next-line
@@ -78,7 +78,7 @@ const App = () => {
 							className="hvr-forward"
 						>
 							<i className="fa fa-twitter"></i>
-							Tweet
+							 Tweet
 						</a>
 					</div>
 				</div>
