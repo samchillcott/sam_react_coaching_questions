@@ -3,13 +3,19 @@
 - Web app to generate coaching questions at random.
 - Set as challenge by mentor - original spec below.
 - Not built using a follow along tutorial.
+- Testing added as second part - notes below.
 
 ## Tech Used
 
 - React.js (useState).
 - JavaScript.
+- DOM manipulation.
+- HTML.
+- CSS.
 - Twitter share.
 - Netlify.
+- Jest.
+- Puppeteer.
 
 ## Features
 
@@ -63,3 +69,49 @@
 This functionality is easy for a reason. Don't use any existing code as a shell but write everything from scratch. In future you probably will use some type of pre-built shell that you'd code into, but for sake of burning these neurons in try to write everything without copy-pasting from outside. That being said, don't try to force yourself to remember everything that needs to be written. When you need to, do look up what needs to go where and compare your code with other things you wrote or the web.
 
 Simply avoid defaulting into 'ok, no copy paste, but I'll just continuously switch between the two windows to make sure I don't miss anything'. Nah - give it a shot to code as much as you can until you go blank for 5 seconds, and only then look up, remember, write that and repeat.
+
+## Testing: Features
+
+- Unit Tests:
+  - Should select an item from an array at random.
+  - Should throw an error if not passed an array.
+  - Should throw an error if array is empty.
+  - Should throw an error if array contains a non number.
+- Integration Test: Randomize function should select an item from the data (copy of questions) array at random.
+- e2e Test: Should display random question inside question component when button clicked (App opened in headless Chromium browser using Puppeteer).
+
+## Testing: What I learned
+
+- Rewriting (my own) code to pure functions with no side effects as preparation for testing aka decoupling. Also doubles up as optimization.
+- Refactoring my own code in general - more knowledge of control flow reduced my logic code from approx 21 lines to 17 lines and 2 fewer functions.
+- The importance/usefulness of pure functions.
+- Testing for exceptions.
+- Why writing test first can give you better code. Write the error handling in the test then go back to the source code to pass the test.
+- How to use the debugger in VSCode - in general, for tests and test inside React.
+
+## Testing: Challenges
+
+- Preparing my code for testing to start off with by rewriting as pure functions.
+- Understanding my own code x months on. (plus the fact a lot of it wasn't my code). Write code/variables and comments so it is self explanatory to prevent this.
+- Keeping to the task at hand and not being distracted by other tweaks and fixes.
+  Understanding what to actually test for (the thinking/philosophy and approach).
+- Testing expected outputs that change each time - my unit test was on a function that was specifically designed to give a different output each time (impure).
+  - Had to install jest-extend (hard to configure because I am using React rather than pure Jest installation). Needed to import modules.
+- Understanding what we are actually testing for.
+- Struggling to see what the test results actually were - some are passing when I don’t think they should be. I am feeding them inputs that should fail that specific test.
+  - selectRandomItemFromArray([1, 2, "cheeky"]).toThrow('Array contains a non-integer').
+  - If I remove cheeky it should fail this test right? Because they ARE all integers.
+- Getting undefined errors on integration test - Cannot read property 'constructor' of undefined.
+- e2e:
+  - using react (index.html) shows blank page, changed to local host.
+  - Targeting classes that are inside other components to test.
+- Debugging in the testing environment - unsure where/how to check what the tests are grabbing (I can’t see the variables/action I need to debug. Which highlights my lack of knowledge using the debugger (and not console logs!)
+
+## Testing: Improvements
+
+- Either test or rewrite function to be fully pure = easier to test.
+
+## Testing: Watch Me Build This
+
+- #daysofcode 3/8/20 - 7/8/20.
+- [Daily Videos - Instagram](https://www.instagram.com/samchillcott/)
