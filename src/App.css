@@ -46,6 +46,7 @@ button {
 
 button:hover {
 	background: rgba(245, 245, 245, 0.452);
+	cursor: pointer;
 }
 
 .question {
@@ -113,6 +114,7 @@ button:hover {
 .hvr-backward:active {
 	-webkit-transform: translateX(-8px);
 	transform: translateX(-8px);
+	cursor: pointer;
 }
 
 /* Media Queries */
