@@ -135,3 +135,9 @@ button:hover {
 		font-size: 1rem;
 	} */
 }
+
+@media screen and (device-aspect-ratio: 40/71) {
+	.question {
+		font-size: 1.3rem;
+	}
+}
