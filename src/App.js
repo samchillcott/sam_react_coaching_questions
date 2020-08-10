@@ -65,21 +65,21 @@ const App = () => {
 				>
 					<div className="icon_wrapper">
 						<a
-							className="fa fa-clipboard"
 							onClick={() => navigator.clipboard.writeText(questionString)}
+							className="hvr-backward"
 						>
-							Clipboard
+							<i className="fa fa-clipboard"></i>
+							 Clipboard
 						</a>
 						<a
-							// className="twitter-share-button"
-							className="fa fa-twitter"
 							// eslint-disable-next-line
 							target="_blank"
 							href={`https://twitter.com/intent/tweet?text="${questionString}" - Generated from Sam's Coaching Question App: https://coachingquestions.netlify.app/`}
+							className="hvr-forward"
 						>
-							Tweet
+							<i className="fa fa-twitter"></i>
+							 Tweet
 						</a>
-						{/* {console.log(questionString)} */}
 					</div>
 				</div>
 			</div>
