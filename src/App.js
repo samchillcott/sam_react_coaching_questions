@@ -1,60 +1,60 @@
-// react and state
 import React, { useState } from "react";
-// Question component
 import Question from "./Question";
-// App style sheet
 import "./App.css";
-// questions list variable
-import questions from "./questions.js";
+// import questions from "./questions.js";
+const { questions } = require("./questions.js");
+const { selectRandomItemFromArray } = require("./utils");
 
 const App = () => {
-	// state
-	// console.log("app code started");
-
-	const [question, setQuestion] = useState("Click Button to Start");
-
+	let [question, setQuestion] = useState("Click Button to Start");
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
 
-	// console.log(data);
-	// console.log("^^ data at top of app = reset");
+	// const randomize = () => {
+	// 	// No repeat array check
+	// 	if (data.length === 0) {
+	// 		data = chosenItems;
+	// 		chosenItems = [];
+	// 	}
 
-	function randomize() {
-		function getRandomValue() {
-			if (data.length === 0) {
-				data = chosenItems;
-				chosenItems = [];
-			}
-			const index = Math.floor(Math.random() * data.length);
-			const choice = data.splice(index, 1)[0];
-			setData(data);
-			// console.log(data);
-			// console.log("^^ data after splice");
-			chosenItems.push(choice);
-			setChosenItems(chosenItems);
-			return choice;
+	// 	let chosenQuestion = selectRandomItemFromArray(data);
+
+	// 	setData(data);
+	// 	chosenItems.push(chosenQuestion);
+	// 	setChosenItems(chosenItems);
+	// 	setQuestion(chosenQuestion);
+	// };
+
+	const randomize = (arr1, arr2, arr1Setter, arr2Setter, stateSetter) => {
+		// No repeat array check
+		if (arr1.length === 0) {
+			arr1 = arr2;
+			arr2 = [];
 		}
 
-		return {
-			randomItem: getRandomValue,
-		};
-	}
+		let chosenQuestion = selectRandomItemFromArray(arr1);
 
-	const randomizeData = randomize();
-
-	let randomQuestion = () => {
-		// console.log("RQ called");
-		let q = randomizeData.randomItem();
-		setQuestion(q);
+		arr2.push(chosenQuestion);
+		arr1Setter(arr1);
+		arr2Setter(arr2);
+		stateSetter(chosenQuestion);
 	};
 
-	const questionString = question.toString();
+	let questionString = question.toString();
+	// console.log(questionString);
 
 	return (
 		<div className="App">
 			<div className="wrapper">
 				<h1>Coaching Question Generator</h1>
-				<button onClick={randomQuestion}>Generate</button>
+				<button
+					className="button"
+					onClick={() =>
+						randomize(data, chosenItems, setData, setChosenItems, setQuestion)
+					}
+				>
+					Generate
+				</button>
 				<Question question={question} />
 				<div
 					className={
@@ -64,17 +64,21 @@ const App = () => {
 					}
 				>
 					<div className="icon_wrapper">
-						<i
-							className="fa fa-clipboard"
-							onClick={() => navigator.clipboard.writeText(questionString)}
-						></i>
 						<a
-							className="twitter-share-button"
+							onClick={() => navigator.clipboard.writeText(questionString)}
+							className="hvr-backward"
+						>
+							<i className="fa fa-clipboard"></i>
+							 Clipboard
+						</a>
+						<a
 							// eslint-disable-next-line
 							target="_blank"
-							href={`https://twitter.com/intent/tweet?text="${questionString}" - Generated from Sam's Coaching Question App: `}
+							href={`https://twitter.com/intent/tweet?text="${questionString}" - Generated from Sam's Coaching Question App: https://coachingquestions.netlify.app/`}
+							className="hvr-forward"
 						>
-							Tweet
+							<i className="fa fa-twitter"></i>
+							 Tweet
 						</a>
 					</div>
 				</div>

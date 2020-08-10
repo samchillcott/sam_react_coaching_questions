@@ -12,4 +12,5 @@ const questions = [
 	"What personal changes do you think you would have to make to achieve your goal?",
 ];
 
-export default questions;
+exports.questions = questions;
+// export default questions;
