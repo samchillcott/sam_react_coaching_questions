@@ -4,6 +4,7 @@ import "./App.css";
 const { questions } = require("./questions.js");
 const { selectRandomItemFromArray } = require("./utils");
 
+// Main function that executes randomization and adjusts state accordingly
 const App = () => {
 	let [question, setQuestion] = useState("Click Button to Start");
 	let [data, setData] = useState([...questions]);

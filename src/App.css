@@ -20,7 +20,6 @@
 	background: rgba(255, 255, 255, 0.4);
 	justify-content: space-around;
 	padding: 1rem;
-	/* min-height: 70vh; */
 	height: 70vh;
 	width: 75%;
 	align-items: center;
@@ -33,7 +32,6 @@
 }
 
 button {
-	/* margin: 5px; */
 	padding: 5px;
 	width: 200px;
 	font-family: "Abel", sans-serif;
@@ -60,7 +58,6 @@ button:hover {
 .share_bar_hidden {
 	visibility: hidden;
 	/* background-color: yellowgreen; */
-	/* display: none; */
 }
 
 .share_bar_visible {
