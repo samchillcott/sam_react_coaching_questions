@@ -53,6 +53,7 @@
 - Redo using material UI.
 - Spacebar or enter to generate.
 - Accessibility test and tweaks.
+- Refactor using SOLID principles.
 
 ## Watch Me Build This
 
