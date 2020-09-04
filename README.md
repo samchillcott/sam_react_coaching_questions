@@ -54,6 +54,7 @@
 - Spacebar or enter to generate.
 - Accessibility test and tweaks.
 - Refactor using SOLID principles.
+- Ensure I have DocBlocks where needed and executed accordingly.
 
 ## Watch Me Build This
 
