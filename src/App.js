@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Question from "./Question";
 import "./App.css";
-// import questions from "./questions.js";
 const { questions } = require("./questions.js");
 const { selectRandomItemFromArray } = require("./utils");
 
@@ -9,21 +8,6 @@ const App = () => {
 	let [question, setQuestion] = useState("Click Button to Start");
 	let [data, setData] = useState([...questions]);
 	let [chosenItems, setChosenItems] = useState([]);
-
-	// const randomize = () => {
-	// 	// No repeat array check
-	// 	if (data.length === 0) {
-	// 		data = chosenItems;
-	// 		chosenItems = [];
-	// 	}
-
-	// 	let chosenQuestion = selectRandomItemFromArray(data);
-
-	// 	setData(data);
-	// 	chosenItems.push(chosenQuestion);
-	// 	setChosenItems(chosenItems);
-	// 	setQuestion(chosenQuestion);
-	// };
 
 	const randomize = (arr1, arr2, arr1Setter, arr2Setter, stateSetter) => {
 		// No repeat array check
@@ -41,7 +25,7 @@ const App = () => {
 	};
 
 	let questionString = question.toString();
-	// console.log(questionString);
+	console.log(questionString);
 
 	return (
 		<div className="App">
