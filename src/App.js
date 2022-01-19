@@ -49,13 +49,13 @@ const App = () => {
 					}
 				>
 					<div className="icon_wrapper">
-						<a
+						<button
 							onClick={() => navigator.clipboard.writeText(questionString)}
 							className="hvr-backward"
 						>
 							<i className="fa fa-clipboard"></i>
 							 Clipboard
-						</a>
+						</button>
 						<a
 							// eslint-disable-next-line
 							target="_blank"
