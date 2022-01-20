@@ -1,7 +1,4 @@
-const { selectRandomItemFromArray } = require("./utils");
-const puppeteer = require("puppeteer");
-const { toBeOneOf } = require("./setupTests");
-const { questions } = require("./questions");
+import { selectRandomItemFromArray } from "./utils";
 
 // Unit Tests
 

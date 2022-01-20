@@ -1,13 +1,11 @@
-const { selectRandomItemFromArray } = require("./utils");
-const puppeteer = require("puppeteer");
-const { toBeOneOf } = require("./setupTests");
-const { questions } = require("./questions");
+import { launch } from "puppeteer";
+import { questions } from "./questions";
+import { selectRandomItemFromArray } from "./utils";
 
 // Integration Tests
 
 describe("randomize function", () => {
 	it("should select an item from the data (copy of questions) array at random", () => {
-		// let arr1 = questions;
 		let data = [...questions];
 		let choice = selectRandomItemFromArray(data);
 		expect(choice).toBeOneOf(questions);
@@ -18,7 +16,7 @@ describe("randomize function", () => {
 
 describe("e2e Test", () => {
 	test("should display random question inside question component when button clicked", async () => {
-		const browser = await puppeteer.launch({
+		const browser = await launch({
 			headless: false,
 			slowMo: 80,
 			args: ["--window-size=1000,800"],
