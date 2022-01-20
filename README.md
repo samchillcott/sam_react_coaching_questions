@@ -8,6 +8,7 @@
 ## Tech Used
 
 - React.js (useState).
+- TypeScript (added in 2022)
 - JavaScript.
 - DOM manipulation.
 - HTML.
@@ -34,6 +35,7 @@
 - Knowing that even if you aren't solving the issue, you are still learning along the way.
 - Great Git practice.
 - Been cool to do a second project without using or referencing another (one that does what i need to do on YouTube in full = the easy way of completing the task).
+- How to convert an existing React project into TypeScript (2022)
 
 ## Challenges
 
