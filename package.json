@@ -33,6 +33,9 @@
 	"devDependencies": {
 		"@testing-library/react": "^9.5.0",
 		"jest-extended": "^0.11.5",
-		"puppeteer": "^5.2.1"
+		"puppeteer": "^5.2.1",
+		"source-map-loader": "^3.0.1",
+		"ts-loader": "^9.2.6",
+		"typescript": "^4.5.4"
 	}
 }
